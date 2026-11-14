@@ -1,0 +1,84 @@
+:root{
+  --ink:#0e1b2c; --ink-2:#17283f; --paper:#f4f7fa; --white:#fff;
+  --text:#1c2a3b; --muted:#5a6b7e; --line:#d9e1ea;
+  --blue:#2b5fd9; --pass:#2fd0a0; --amber:#f2b134;
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--text);background:var(--white);line-height:1.65;font-size:1.0625rem}
+h1,h2,h3{font-family:var(--display);color:var(--ink);letter-spacing:-.02em;line-height:1.15}
+h2{font-size:clamp(1.8rem,3.5vw,2.4rem);font-weight:800}
+h3{font-size:1.25rem;font-weight:700}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+/* nav */
+.site-nav{background:rgba(14,27,44,.92);backdrop-filter:blur(8px)}
+.site-nav .navbar-brand{font-family:var(--display);font-weight:700;color:#fff}
+.site-nav .nav-link{color:#b8c6d8;font-weight:500}
+.site-nav .nav-link:hover,.site-nav .nav-link.active{color:#fff}
+.navbar-toggler{border-color:#5a6b7e;filter:invert(1)}
+
+/* hero */
+.hero{background:var(--ink);color:#d3dde9;padding:9rem 0 6rem}
+.hero h1{color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);font-weight:800;max-width:18ch}
+.hero-kicker{color:var(--pass);font-family:var(--mono);font-size:.95rem;margin-bottom:1rem}
+.hero-lead{font-size:1.2rem;max-width:52ch;margin-top:1.5rem;color:#b8c6d8}
+.btn-accent{background:var(--amber);color:var(--ink);font-weight:600;border:0}
+.btn-accent:hover{background:#ffc552;color:var(--ink)}
+.btn-outline-light:hover{color:var(--ink)}
+
+/* sections */
+.section{padding:5.5rem 0}
+.section.alt{background:var(--paper)}
+.lead-text{font-size:1.3rem;color:var(--ink);font-weight:500;max-width:60ch}
+.section p{max-width:68ch}
+.facts strong{display:block;font-family:var(--display);font-size:2rem;color:var(--blue);line-height:1.1}
+.facts span{font-size:.9rem;color:var(--muted)}
+
+/* timeline */
+.timeline{border-left:2px solid var(--line);padding-left:0}
+.job{display:grid;grid-template-columns:200px 1fr;gap:1.5rem;padding:0 0 2.8rem 2rem;position:relative}
+.job::before{content:"";position:absolute;left:-7px;top:.55rem;width:12px;height:12px;border-radius:50%;background:var(--blue);border:2px solid var(--paper)}
+.job-meta span{display:block;font-family:var(--mono);font-size:.9rem;color:var(--ink)}
+.job-meta small{color:var(--muted)}
+.org{color:var(--muted);margin-bottom:.6rem}
+.job ul{padding-left:1.1rem;max-width:70ch}
+.job li{margin-bottom:.4rem}
+@media(max-width:767px){.job{grid-template-columns:1fr;gap:.4rem}}
+
+/* projects */
+.project{border:1px solid var(--line);border-radius:10px;padding:2rem;background:var(--white)}
+.tag{display:inline-block;font-family:var(--mono);font-size:.85rem;color:var(--blue);margin-bottom:.8rem}
+.sub{color:var(--muted);font-weight:500}
+.venue{font-size:.95rem;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:.45rem}
+.chips span{border:1px solid var(--line);background:var(--white);border-radius:999px;padding:.2rem .8rem;font-size:.9rem}
+.alt .chips span{background:var(--white)}
+.skill-h{font-size:1.05rem;margin-bottom:.8rem}
+
+/* education */
+.edu,.plain{list-style:none;padding:0;margin:0}
+.edu li{padding:0 0 1.2rem 1rem;border-left:3px solid var(--blue);margin-bottom:1.2rem}
+.edu strong{display:block;color:var(--ink)}
+.edu span{color:var(--muted)}
+.plain li{padding:.5rem 0;border-bottom:1px solid var(--line)}
+
+/* contact */
+.contact{background:var(--ink);color:#c5d2e1}
+.contact h2{color:#fff}
+.contact a{color:var(--amber)}
+.contact .form-label{color:#e4ecf5}
+.contact .form-control{background:var(--ink-2);border-color:#2a3d57;color:#fff}
+.contact .form-control:focus{background:var(--ink-2);color:#fff;border-color:var(--amber);box-shadow:none}
+.site-footer{background:#091320;color:#8ea2ba;padding:1.4rem 0;font-size:.95rem}
+.site-footer a{color:#b8c6d8}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+
+/* hero photo */
+.hero-photo{width:100%;max-width:400px;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%;border-radius:10px;border:1px solid #2a3d57;box-shadow:14px 14px 0 var(--ink-2)}
+@media(max-width:991px){.hero{padding-top:7rem}.hero-photo{max-width:300px}}
